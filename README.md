@@ -30,7 +30,19 @@ Data Handling  : Pandas, NumPy
 ----------------------------------------------------------------------
 Architecture diagram
 ----------------------------------------------------------------------
-```mermaid flowchart TD A[dataset.csv] --> B[Preprocessing] B --> C[Simulated Streaming via Pathway] C --> D[Daily Tumbling Windows] D --> E[Pricing Models] E --> F[Price_M1 (Baseline)] E --> G[Price_M2 (Demand-Based)] E --> H[Price_M3 (Competitive)] F --> I[Real-time Visualization (Bokeh + Panel)] G --> I H --> I I --> J[Dashboard Output] ```
+```mermaid
+flowchart TD 
+ A[dataset.csv] --> B[Preprocessing]
+ B --> C[Simulated Streaming via Pathway]
+ C --> D[Daily Tumbling Windows]
+ D --> E[Pricing Models]
+ E --> F[Price_M1]
+ E --> G[Price_M2]
+ F --> I[Real-time Visualization (Bokeh + Panel)]
+ G --> I
+ H --> I
+ I --> J[Dashboard Output]
+```
 
 
 -----------------------------------------------------------------------
