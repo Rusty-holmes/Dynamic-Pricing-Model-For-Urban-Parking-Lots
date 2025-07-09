@@ -46,6 +46,36 @@ Project Flow
 
 5. Execution
    - The pipeline is activated via pw.run().
+-----------------------------------------------------------------------
+Demand Function
+-----------------------------------------------------------------------
+The demand function in this model is an empirical score based on the following inputs:
+
+demand = α * occupancy_rate + β * queue_length + γ * traffic_level
+         + δ * is_special_day + ε * vehicle_type_weight
+         
+Each component reflects real-world influence on user behavior:
+1.Occupancy rate captures urgency
+2.Queue length signals waiting time
+3.Traffic level indicates external congestion
+4.Special days tend to attract more cars
+5.Vehicle type reflects space usage and urgency
+--------------------------------------------------------------------------
+Pricing Logic
+--------------------------------------------------------------------------
+Model 1 (Baseline):
+Adjusts price linearly as:
+price = base + 0.5 × (occupancy_rate - 0.5)
+
+Model 2 (Demand-Based):
+Computes a normalized demand score and scales price accordingly. Prices are clipped between ₹5 and ₹20.
+
+--------------------------------------------------------------------------
+Justification for Steps
+--------------------------------------------------------------------------
+1.Tumbling windows were used to ensure pricing stability within a day.
+2.Pathway enables reactive, fault-tolerant streaming suitable for real-time deployment.
+3.Using Bokeh + Panel allows continuous visual tracking of pricing evolution.
 
 -----------------------------------------------------------------------
 Installation
