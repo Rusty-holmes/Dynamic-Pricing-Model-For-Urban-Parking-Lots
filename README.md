@@ -26,6 +26,24 @@ Streaming Tool : Pathway
 Visualization  : Bokeh + Panel
 Data Handling  : Pandas, NumPy
 
+
+----------------------------------------------------------------------
+Architecture diagram
+----------------------------------------------------------------------
+```mermaid
+flowchart TD
+    A[dataset.csv] --> B[Preprocessing]
+    B --> C[Simulated Streaming via Pathway]
+    C --> D[Daily Tumbling Windows]
+    D --> E[Pricing Models]
+    E --> F[Price_M1 (Baseline)]
+    E --> G[Price_M2 (Demand-Based)]
+    E --> H[Price_M3 (Competitive)]
+    F & G & H --> I[Real-time Visualization (Bokeh + Panel)]
+    I --> J[Dashboard Output]
+```
+
+
 -----------------------------------------------------------------------
 Project Flow
 -----------------------------------------------------------------------
