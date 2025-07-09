@@ -36,11 +36,10 @@ flowchart TD
  B --> C[Simulated Streaming via Pathway]
  C --> D[Daily Tumbling Windows]
  D --> E[Pricing Models]
- E --> F[Price_M1]
- E --> G[Price_M2]
- F --> I[Real-time Visualization]
+ E --> F[Price_M1 baseline]
+ E --> G[Price_M2 demand-based]
+ F --> I[Real-time Visualization  Panel+Bokeh]
  G --> I
- H --> I
  I --> J[Dashboard Output]
 ```
 
