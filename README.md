@@ -72,9 +72,10 @@ How to Run
 File Structure
 -----------------------------------------------------------------------
 urban-parking-pricing/
-├── final_submission.ipynb      (Final notebook)
-├── dataset.csv                 (Parking data stream)
-├── README.txt                  (This file)
+├── Final.ipynb      (Final notebook)
+├── dataset.csv      (Parking data stream)
+├── parking_stream.csv  (modified data frame for realtime streaming)
+├── README.txt       (This file)
 
 -----------------------------------------------------------------------
 Contributors
