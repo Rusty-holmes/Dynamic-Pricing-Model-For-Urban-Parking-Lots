@@ -74,7 +74,6 @@ File Structure
 urban-parking-pricing/
 ├── Final.ipynb      (Final notebook)
 ├── dataset.csv      (Parking data stream)
-├── parking_stream.csv  (modified data frame for realtime streaming)
 ├── README.txt       (This file)
 
 -----------------------------------------------------------------------
