@@ -39,7 +39,9 @@ flowchart TD
     E --> F[Price_M1 (Baseline)]
     E --> G[Price_M2 (Demand-Based)]
     E --> H[Price_M3 (Competitive)]
-    F & G & H --> I[Real-time Visualization (Bokeh + Panel)]
+    F --> I[Real-time Visualization (Bokeh + Panel)]
+    G --> I
+    H --> I
     I --> J[Dashboard Output]
 ```
 
