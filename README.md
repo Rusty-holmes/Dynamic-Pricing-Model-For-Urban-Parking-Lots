@@ -38,7 +38,7 @@ flowchart TD
  D --> E[Pricing Models]
  E --> F[Price_M1]
  E --> G[Price_M2]
- F --> I[Real-time Visualization (Bokeh + Panel)]
+ F --> I[Real-time Visualization]
  G --> I
  H --> I
  I --> J[Dashboard Output]
